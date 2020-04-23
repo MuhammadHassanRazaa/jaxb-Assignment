@@ -6,6 +6,9 @@ import java.time.Year;
 import java.util.List;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -13,7 +16,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {"title", "year", "rating", "votes", "genres"})
-@Data
+@Getter
+@Setter
+@ToString
 public class Movie {
 
     private String title;
